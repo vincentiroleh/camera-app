@@ -9,11 +9,19 @@
 </head>
 <body>
     <!-- Camera -->
-    <main id="">
-        <canvas id="camera-sensor">
+    <main id="camera">
+        
+        <!-- Camera View -->
+        <video id="camera-view" autoplay playsinline></video>
+        
+        <!-- Camera Sensor -->
+        <canvas id="camera-sensor"></canvas>
 
-        </canvas>
+        <!-- Camera Output -->
+        <img src="//:0" alt="" id="camera-output">
 
+        <!-- Camera trigger -->
+        <button id="camera-trigger">Take a picture</button>
     </main>
 
     
