@@ -1,0 +1,49 @@
+/* CSS reset  */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+/* Fitting the elements we created to the screen */
+#camera, #camera-view, #camera-sensor, #camera-output {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* to mirror the image to make it feel more natural */
+#camera-view, #camera-sensor, #camera-output {
+    transform: scaleX(-1);
+    filter: FlipH;
+}
+
+/* setting the position property for camera-trigger to fixed and to center it on the bottom of the screen */
+#camera-trigger {
+    width: 200px;
+    background: color #000000;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 30px;
+    border: none;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+    position: fixed;
+    bottom: 30px;
+    left: calc(50% - 100px);
+}
+
+/* styling for the image after it's taken... */
+.taken {
+    height: 100px !important;
+    width:  100px  !important;
+    transition: all 0.5s ease-in;
+    border: solid 3px #fff;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+}
